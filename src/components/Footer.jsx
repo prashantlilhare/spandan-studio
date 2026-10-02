@@ -11,7 +11,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative overflow-hidden bg-ink pb-8 pt-24 md:pt-32">
+    <footer className="relative overflow-hidden bg-ink pb-8 pt-16 md:pt-20">
       <div className="container-x">
         <div className="grid grid-cols-12 gap-x-5 gap-y-12">
           <div className="col-span-12 md:col-span-5">
@@ -51,13 +51,13 @@ export default function Footer() {
 
       <p
         aria-hidden="true"
-        className="mt-20 select-none whitespace-nowrap text-center font-display text-[10.4vw] font-light uppercase leading-[0.8] tracking-[-0.04em] text-bone/[0.92] md:mt-28"
+        className="mt-14 select-none whitespace-nowrap text-center font-display text-[10.4vw] font-light uppercase leading-[0.8] tracking-[-0.04em] text-bone/[0.92] md:mt-16"
       >
         Spandan <span className="italic text-bronze">Studios</span>
       </p>
 
       <div className="container-x mt-10 flex flex-col gap-6 border-t border-bone/10 pt-6 md:flex-row md:items-center md:justify-between">
-        <p className="eyebrow text-[0.6rem] text-stone">© 2024 Spandan Studios — All Rights Reserved.</p>
+        <p className="eyebrow text-[0.6rem] text-stone">© {new Date().getFullYear()} Spandan Studios — All Rights Reserved.</p>
         <SocialLinks variant="icon" className="text-bone/70" />
         <a
           href="#home"

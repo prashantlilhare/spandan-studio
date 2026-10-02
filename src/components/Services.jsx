@@ -41,7 +41,7 @@ function ServicesInteractive() {
   }
 
   return (
-    <div className="mt-24 hidden grid-cols-12 gap-x-5 lg:grid">
+    <div className="mt-16 hidden grid-cols-12 gap-x-5 lg:grid">
       <div className="sticky top-28 col-span-5 self-start">
         <ImageReveal>
           <div className="relative aspect-[4/5] overflow-hidden" onMouseMove={onMove} onMouseLeave={onLeave}>
@@ -136,27 +136,22 @@ function ServicesInteractive() {
 /** Mobile & tablet: each service is its own small editorial spread, alternating sides. */
 function ServicesStacked() {
   return (
-    <div className="mt-16 space-y-24 md:mt-20 lg:hidden">
+    <div className="mt-12 space-y-16 md:mt-16 lg:hidden">
       {services.map((s, i) => {
         const flip = i % 2 === 1
         return (
           <article key={s.id} className="grid grid-cols-12 gap-x-5">
-            <div className={`relative col-span-10 md:col-span-7 ${flip ? 'col-start-3 md:col-start-6' : ''}`}>
+            <div className={`col-span-10 md:col-span-7 ${flip ? 'col-start-3 md:col-start-6' : ''}`}>
               <ImageReveal className={flip ? 'aspect-[4/5]' : 'aspect-[5/4]'}>
                 <ArtImage src={s.image} alt={s.imageAlt} className="h-full w-full" />
               </ImageReveal>
-              <span
-                className={`absolute -bottom-7 font-display text-7xl italic leading-none text-bronze md:text-8xl ${
-                  flip ? '-left-3' : '-right-3'
-                }`}
-                aria-hidden="true"
-              >
-                {s.number}
-              </span>
             </div>
-            <div className={`col-span-12 mt-12 md:col-span-8 ${flip ? '' : 'md:col-start-4'}`}>
+            <div className={`col-span-12 mt-6 md:col-span-8 ${flip ? '' : 'md:col-start-4'}`}>
               <Reveal>
-                <h3 className="font-display text-[clamp(2.1rem,8vw,3.5rem)] uppercase leading-[0.95] tracking-[-0.015em]">
+                <span className="block font-display text-5xl italic leading-none text-bronze md:text-6xl" aria-hidden="true">
+                  {s.number}
+                </span>
+                <h3 className="mt-3 font-display text-[clamp(2.1rem,8vw,3.5rem)] uppercase leading-[0.95] tracking-[-0.015em]">
                   {s.title}
                 </h3>
               </Reveal>
@@ -174,7 +169,7 @@ function ServicesStacked() {
 
 export default function Services() {
   return (
-    <section id="services" aria-labelledby="services-title" className="bg-ink-2 py-28 md:py-40">
+    <section id="services" aria-labelledby="services-title" className="bg-ink-2 py-20 md:py-28">
       <div className="container-x">
         <div className="grid grid-cols-12 items-end gap-x-5 gap-y-8">
           <div className="col-span-12 md:col-span-7">

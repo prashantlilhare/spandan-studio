@@ -60,8 +60,8 @@ export default function Statement() {
   }, [])
 
   return (
-    <section aria-label="Studio statement" className="relative overflow-hidden bg-ink pb-24 md:pb-32">
-      <div className="container-x py-28 md:py-44">
+    <section aria-label="Studio statement" className="relative overflow-hidden bg-ink">
+      <div className="container-x pb-16 pt-4 md:pb-24 md:pt-8">
         <Eyebrow index="02">Statement</Eyebrow>
         <p
           ref={text}
@@ -79,7 +79,7 @@ export default function Statement() {
             )),
           )}
         </p>
-        <div className="mt-14 flex justify-end md:mt-20">
+        <div className="mt-10 flex justify-end md:mt-12">
           <p className="eyebrow max-w-[16rem] text-right text-stone">
             Every installation begins with a story — and ends in a space that feels alive.
           </p>

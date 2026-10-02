@@ -69,7 +69,7 @@ export default function Navbar() {
     <>
       <motion.header
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-          scrolled && !open ? 'border-b border-bone/[0.06] bg-ink/80 backdrop-blur-md' : 'border-b border-transparent'
+          scrolled && !open ? 'border-b border-bone/[0.08] bg-ink' : 'border-b border-transparent'
         }`}
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: hidden && !open ? '-100%' : 0, opacity: 1 }}

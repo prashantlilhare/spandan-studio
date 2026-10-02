@@ -35,7 +35,7 @@ function ActionRow({ href, label, detail }) {
 
 export default function Contact() {
   return (
-    <section id="contact" aria-labelledby="contact-title" className="relative bg-ink pt-28 md:pt-40">
+    <section id="contact" aria-labelledby="contact-title" className="relative bg-ink pt-20 md:pt-28">
       <div className="container-x">
         <Eyebrow index="06">Contact</Eyebrow>
         <h2
@@ -51,7 +51,7 @@ export default function Contact() {
           </MaskLine>
         </h2>
 
-        <div className="mt-20 grid grid-cols-12 gap-x-5 gap-y-16 md:mt-28">
+        <div className="mt-14 grid grid-cols-12 gap-x-5 gap-y-12 md:mt-20">
           <div className="col-span-12 grid grid-cols-2 gap-x-6 gap-y-10 self-start md:col-span-5 lg:col-span-4">
             <Reveal className="col-span-2 sm:col-span-1 md:col-span-2">
               <p className="eyebrow text-[0.6rem] text-bronze">Studio</p>
@@ -103,7 +103,7 @@ export default function Contact() {
       </div>
 
       {/* Location */}
-      <div className="mt-24 md:mt-32">
+      <div className="mt-16 md:mt-20">
         <div className="container-x flex flex-wrap items-end justify-between gap-4 pb-6">
           <p className="eyebrow text-stone">Find the studio</p>
           <a

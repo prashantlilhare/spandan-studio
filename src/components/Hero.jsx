@@ -56,7 +56,7 @@ export default function Hero() {
       id="home"
       ref={root}
       aria-label="Spandan Studios"
-      className="relative isolate flex h-[100svh] min-h-[640px] flex-col justify-end overflow-hidden bg-ink"
+      className="relative isolate flex min-h-[max(100svh,640px)] flex-col overflow-hidden bg-ink pt-24 md:pt-[6.5rem]"
     >
       <div ref={media} className="absolute inset-0 -z-10">
         <motion.div
@@ -73,6 +73,7 @@ export default function Hero() {
           />
         </motion.div>
         <div className="absolute inset-0 bg-ink/40" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink/80 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-ink via-ink/70 to-transparent" />
       </div>
 
@@ -88,43 +89,45 @@ export default function Hero() {
         </span>
       </motion.div>
 
-      <div ref={content} className="container-x pb-8 md:pb-12">
-        <motion.div {...fade(0.2)} className="eyebrow mb-5 flex justify-between text-bone/70 md:mb-6">
+      <div ref={content} className="container-x flex flex-1 flex-col justify-between gap-8 pb-8 md:pb-12">
+        <motion.div {...fade(0.2)} className="eyebrow flex justify-between text-bone/70">
           <span>
             Art <span className="text-bronze">•</span> Design <span className="text-bronze">•</span> Installation
           </span>
           <span className="hidden sm:block">Surat — India</span>
         </motion.div>
 
-        <h1 className="font-display text-[clamp(3.6rem,17.5vw,17.5rem)] font-normal uppercase leading-[0.8] tracking-[-0.035em]">
-          <MaskLine delay={0.35} duration={1.3}>
-            Spandan
-          </MaskLine>
-          <MaskLine delay={0.5} duration={1.3} className="pl-[11vw] font-light italic md:pl-[19vw]">
-            Studios
-          </MaskLine>
-        </h1>
+        <div>
+          <h1 className="font-display text-[clamp(3.6rem,min(17.5vw,27svh),17.5rem)] font-normal uppercase leading-[0.8] tracking-[-0.035em]">
+            <MaskLine delay={0.35} duration={1.3}>
+              Spandan
+            </MaskLine>
+            <MaskLine delay={0.5} duration={1.3} className="pl-[11vw] font-light italic md:pl-[19vw]">
+              Studios
+            </MaskLine>
+          </h1>
 
-        <div className="mt-8 grid items-end gap-x-5 gap-y-7 border-t border-bone/15 pt-6 md:mt-10 md:grid-cols-12">
-          <motion.p
-            {...fade(0.9)}
-            className="font-display text-[1.75rem] italic leading-[1.1] md:col-span-5 md:text-[2.4rem]"
-          >
-            Feel your heartbeat
-            <br />
-            in our artwork.
-          </motion.p>
-          <motion.p {...fade(1)} className="max-w-xs text-sm leading-relaxed text-stone md:col-span-3 md:col-start-7">
-            Art installations, sculptures and spaces crafted with detail, imagination and purpose.
-          </motion.p>
-          <motion.div {...fade(1.1)} className="flex flex-col md:col-span-3 md:col-start-10">
-            <HeroLink href="#works" icon={ArrowDownRight} primary>
-              Explore our work
-            </HeroLink>
-            <HeroLink href="#contact" icon={ArrowUpRight}>
-              Contact studio
-            </HeroLink>
-          </motion.div>
+          <div className="mt-8 grid items-end gap-x-5 gap-y-7 border-t border-bone/15 pt-6 md:mt-10 md:grid-cols-12">
+            <motion.p
+              {...fade(0.9)}
+              className="font-display text-[1.75rem] italic leading-[1.1] md:col-span-5 md:text-[2.4rem]"
+            >
+              Feel your heartbeat
+              <br />
+              in our artwork.
+            </motion.p>
+            <motion.p {...fade(1)} className="max-w-xs text-sm leading-relaxed text-stone md:col-span-3 md:col-start-7">
+              Art installations, sculptures and spaces crafted with detail, imagination and purpose.
+            </motion.p>
+            <motion.div {...fade(1.1)} className="flex flex-col md:col-span-3 md:col-start-10">
+              <HeroLink href="#works" icon={ArrowDownRight} primary>
+                Explore our work
+              </HeroLink>
+              <HeroLink href="#contact" icon={ArrowUpRight}>
+                Contact studio
+              </HeroLink>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

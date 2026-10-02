@@ -81,10 +81,10 @@ export default function Gallery() {
       id="works"
       ref={section}
       aria-labelledby="works-title"
-      className="relative overflow-hidden bg-ink py-28 md:py-36 lg:flex lg:h-[100svh] lg:flex-col lg:justify-center lg:py-0"
+      className="relative overflow-hidden bg-ink py-20 md:py-28 lg:flex lg:h-[100svh] lg:flex-col lg:justify-center lg:py-0"
     >
       {/* Heading for small screens sits above the track */}
-      <div className="container-x mb-12 lg:hidden">
+      <div className="container-x mb-10 lg:hidden">
         <Eyebrow index="04">Works</Eyebrow>
         <Title className="mt-8" />
         <Reveal>
@@ -131,12 +131,12 @@ export default function Gallery() {
                 View
               </span>
             </button>
-            <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-              <span className="flex items-baseline gap-3">
-                <span className="eyebrow text-[0.6rem] tabular-nums text-bronze">No. {item.number}</span>
-                <span className="font-display text-xl italic">{item.title}</span>
+            <figcaption className="mt-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <span className="flex min-w-0 items-baseline gap-3">
+                <span className="eyebrow whitespace-nowrap text-[0.6rem] tabular-nums text-bronze">No. {item.number}</span>
+                <span className="font-display text-xl italic leading-tight">{item.title}</span>
               </span>
-              <span className="eyebrow text-[0.55rem] text-stone">{item.medium}</span>
+              <span className="eyebrow whitespace-nowrap text-[0.55rem] text-stone">{item.medium}</span>
             </figcaption>
           </figure>
         ))}

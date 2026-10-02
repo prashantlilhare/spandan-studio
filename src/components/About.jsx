@@ -14,7 +14,7 @@ const facts = [
 
 export default function About() {
   return (
-    <section id="about" aria-labelledby="about-title" className="relative bg-ink py-28 md:py-40">
+    <section id="about" aria-labelledby="about-title" className="relative bg-ink py-20 md:py-28">
       <div className="container-x">
         <Eyebrow index="01">Explore our vision</Eyebrow>
 
@@ -28,7 +28,7 @@ export default function About() {
           </MaskLine>
         </h2>
 
-        <div className="mt-16 grid grid-cols-12 gap-x-5 gap-y-14 md:mt-24">
+        <div className="mt-12 grid grid-cols-12 gap-x-5 gap-y-12 md:mt-16">
           <figure className="col-span-11 md:col-span-6 lg:col-span-5">
             <ParallaxImage
               src={images.about}
@@ -41,7 +41,7 @@ export default function About() {
             </figcaption>
           </figure>
 
-          <div className="col-span-12 md:col-span-6 md:pt-20 lg:col-span-5 lg:col-start-7 lg:pt-36">
+          <div className="col-span-12 md:col-span-6 md:pt-12 lg:col-span-5 lg:col-start-7 lg:pt-24">
             <Reveal>
               <p className="font-display text-[1.9rem] leading-[1.12] md:text-[2.5rem]">
                 At Spandan Studios, we believe that art is a form of expression that{' '}
@@ -73,7 +73,7 @@ export default function About() {
         </div>
 
         {/* Signature line */}
-        <div className="mt-24 grid grid-cols-12 items-end gap-x-5 gap-y-10 md:mt-36">
+        <div className="mt-20 grid grid-cols-12 items-end gap-x-5 gap-y-8 md:mt-24">
           <ImageReveal className="col-span-5 col-start-8 aspect-square md:order-none md:col-span-3 md:col-start-2">
             <ArtImage src={images.aboutDetail} alt="Artwork detail by Spandan Studios" className="h-full w-full" />
           </ImageReveal>

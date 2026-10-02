@@ -58,7 +58,7 @@ function Founder({ founder, flip }) {
           </MaskLine>
         </h3>
         <Reveal delay={0.15}>
-          <p className="mt-8 max-w-md border-l border-ink/20 pl-6 font-display text-xl leading-snug text-ink/80 md:text-[1.4rem]">
+          <p className="mt-6 max-w-md border-l border-ink/20 pl-6 font-display text-xl leading-snug text-ink/80 md:text-[1.4rem]">
             {description}
           </p>
         </Reveal>
@@ -69,7 +69,7 @@ function Founder({ founder, flip }) {
 
 export default function Founders() {
   return (
-    <section id="founders" aria-labelledby="founders-title" className="bg-paper py-28 text-ink md:py-40">
+    <section id="founders" aria-labelledby="founders-title" className="bg-paper py-20 text-ink md:py-28">
       <div className="container-x">
         <div className="grid grid-cols-12 items-end gap-x-5 gap-y-8">
           <div className="col-span-12 lg:col-span-9">
@@ -94,7 +94,7 @@ export default function Founders() {
           </Reveal>
         </div>
 
-        <div className="mt-20 space-y-24 md:mt-32 md:space-y-10">
+        <div className="mt-14 space-y-16 md:mt-20 md:space-y-10">
           {founders.map((f, i) => (
             <div key={f.last + i} className={i === 1 ? 'md:-mt-4 lg:-mt-16' : ''}>
               <Founder founder={f} flip={i === 1} />
